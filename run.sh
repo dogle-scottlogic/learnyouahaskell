@@ -10,8 +10,8 @@ function run() {
     ghc -o compiled_file "$basename".hs
     ./compiled_file
     rm -rf ./compiled_file
-    rm -rf "$basename".hi
-    rm -rf "$basename".o
+    rm -rf -- *.hi
+    rm -rf -- *.o
 }
 
 run $1
